@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs", //编译时按照commonjs模块进行编译
+        "moduleResolution": "node",
+        "sourceMap": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": false
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+            "app/**/*" //app下的所有ts文件
+        ]
+        // "Files":[  //或单独写下要编译的文件
+        // "app/abc.ts",
+        // "app/bcd.ts"
+        // ]
+}
