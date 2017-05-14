@@ -1,4 +1,4 @@
-var firstName = 'Michael';
+var firstName = 'Mich';
 var lastName = 'Jackson';
 var year = 1958;
 
