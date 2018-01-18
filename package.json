@@ -1,21 +1,26 @@
 {
-    "name": "webpack-demo",
-    "version": "1.0.0",
-    "description": "/*npm run build  执行tsc时会先找tsconfig.json进行配置编译，通过后执行webpack，此编译是两部，会先生成js文件后打包，也可将编译文件直接写在tsc后面*/",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "webpack --config mywebpack.config.js",
-        "build": "webpack --config webpack.config.prod.js",
-        "server": "webpack-dev-server --inline --hot --config webpack.config.dev.js"
-    },
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "assets-webpack-plugin": "^3.5.1",
-        "ts-loader": "^2.0.3",
-        "typescript": "^2.3.2",
-        "webpack": "^2.5.1",
-        "webpack-dev-server": "^2.4.5"
-    }
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "/*npm run build  执行tsc时会先找tsconfig.json进行配置编译，通过后执行webpack，此编译是两部，会先生成js文件后打包，也可将编译文件直接写在tsc后面*/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run server && tsc \"app/app.ts\"",
+    "build": "webpack --config webpack.config.dev.js",
+    "prod": "webpack --config webpack.config.prod.js",
+    "server": "webpack-dev-server --inline --hot --config webpack.config.dev.js"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.5.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "html-webpack-plugin": "^2.30.1",
+    "inline-manifest-webpack-plugin": "^3.0.1",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.3.2",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  }
 }

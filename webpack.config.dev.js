@@ -15,13 +15,13 @@ var CleanWebpackPlugin = require("clean-webpack-plugin"); //编译前先删除di
 
 module.exports = {
     entry: {
-        abc: './app/abc.ts', //编译总的ts文件，导入了其他模块
+        abc: './app/app.ts', //编译总的ts文件，导入了其他模块
     },
     output: {
         path: path.join(__dirname, "./dist"),
         filename: "[name].bundle.js",
         chunkFilename: "[name].bundle.js",
-        publicPath: "", //实现修改更新至缓存，启动webpack-dev-server后直接编译文件至缓存
+        // publicPath: "", //实现修改更新至缓存，启动webpack-dev-server后直接编译文件至缓存
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js"] //直接编译及打包一步完成需要resolve，执行webpack时执行
